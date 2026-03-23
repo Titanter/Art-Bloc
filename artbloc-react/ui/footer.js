@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div>
+    <footer>
       <h4> Navigation </h4>
       <nav>
         <ul>
@@ -10,10 +10,10 @@ const Footer = () => {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/artists/artists">Artists</Link>
+            <Link href="/artists">Artists</Link>
           </li>
           <li>
-            <Link href="/events/events">Events</Link>
+            <Link href="/events">Events</Link>
           </li>
           <li>
             <Link href="/about">About</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
       <h4> Address </h4>
       <h5>TBD</h5>
       
-    </div>
+    </footer>
   );
 };
 
