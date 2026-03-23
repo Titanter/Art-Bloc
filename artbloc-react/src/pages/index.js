@@ -1,12 +1,12 @@
 import Layout from "../layout";
 
-const About = () => {
+const Home = () => {
     return (
         <Layout >
             <div>
-                About page
+                Home page
             </div>
         </Layout>)
 }
 
-export default About
+export default Home
