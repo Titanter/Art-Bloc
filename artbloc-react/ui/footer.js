@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Footer = () => {
+function Footer(){
   return (
     <footer>
       <h4> Navigation </h4>
@@ -31,10 +31,10 @@ const Footer = () => {
             <Link href="/">Email</Link>
           </li>
           <li>
-            <Link href="/">Instagram</Link>
+            <Link href="https://www.instagram.com/artblocstudio/">Instagram</Link>
           </li>
           <li>
-            <Link href="/">Facebook</Link>
+            <Link href="https://www.facebook.com/profile.php?id=61579428009401">Facebook</Link>
           </li>
         </ul>
       </nav>
@@ -45,5 +45,14 @@ const Footer = () => {
     </footer>
   );
 };
+
+/*
+
+TODO:
+
+- Email link
+- Insta & FB links to new window
+
+*/
 
 export default Footer;

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Header = () => {
+function Header(){
   return (
     <div>
       <nav>
