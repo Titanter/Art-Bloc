@@ -1,5 +1,7 @@
 /*
 
+most important ui element.
+takes string as role, switch case functionality based off role?
 
 */
 
