@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="grid grid-cols-4 flex-row pt-7 pl-10 bg-[#2c2421] w-full h-full">
+    <div className="grid grid-cols-4 pt-7 pl-10 bg-[#2c2421] w-full h-full">
       <div>
         <p className="text-xl mb-4">Navigation</p>
         <ul className="text-base mb-1">
@@ -28,7 +28,7 @@ function Footer() {
         <p className="text-xl mb-4">Contact</p>
         <ul className="text-base mb-1">
           <li className="mb-1">
-            <Link href="/">Email</Link>
+            <Link href="mailto:artbloc@outlook.com" target="_blank">Email</Link>
           </li>
           <li className="mb-1">
             <Link href="https://www.instagram.com/artblocstudio/" target="_blank">
@@ -51,13 +51,5 @@ function Footer() {
     </div>
   );
 }
-
-/*
-
-TODO:
-
-- Email link
-
-*/
 
 export default Footer;

@@ -7,11 +7,11 @@ function Layout({ children }) {
   return (
     <html className="bg-[#f5ebd9]">
       <body>
-        <div className="fixed top-0 z-100 flex w-screen flex-row h-1/10 border">
+        <div className="absolute top-0 z-1 flex w-screen h-24">
           <Header />
         </div>
-        <div className="relative flex w-screen flex-row ">{children}</div>
-        <div className="fixed bottom-0 flex w-screen flex-row h-60 border">
+        <div className="relative flex w-screen ">{children}</div>
+        <div className="absolute bottom-0 w-screen flex h-60">
           <Footer />
         </div>
       </body>
