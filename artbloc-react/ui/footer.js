@@ -1,57 +1,62 @@
 import Link from "next/link";
 
-function Footer(){
+function Footer() {
   return (
-    <footer>
-      <h4> Navigation </h4>
-      <nav>
-        <ul>
+    <div className="grid grid-cols-4 flex-row pt-7 pl-10 bg-[#2c2421] w-full h-full">
+      <div>
+        <p className="text-xl mb-4">Navigation</p>
+        <ul className="text-base mb-1">
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" className="mb-1">Home</Link>
           </li>
           <li>
-            <Link href="/artists">Artists</Link>
+            <Link href="/artists" className="mb-1">Artists</Link>
           </li>
           <li>
-            <Link href="/events">Events</Link>
+            <Link href="/events" className="mb-1">Events</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about" className="mb-1">About</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" className="mb-1">Contact</Link>
           </li>
         </ul>
-      </nav>
+      </div>
 
-      <h4> Contact </h4>
-      <nav>
-        <ul>
-          <li>
+      <div>
+        <p className="text-xl mb-4">Contact</p>
+        <ul className="text-base mb-1">
+          <li className="mb-1">
             <Link href="/">Email</Link>
           </li>
-          <li>
-            <Link href="https://www.instagram.com/artblocstudio/">Instagram</Link>
+          <li className="mb-1">
+            <Link href="https://www.instagram.com/artblocstudio/" target="_blank">
+              Instagram
+            </Link>
           </li>
-          <li>
-            <Link href="https://www.facebook.com/profile.php?id=61579428009401">Facebook</Link>
+          <li className="mb-1">
+            <Link href="https://www.facebook.com/profile.php?id=61579428009401" target="_blank">
+              Facebook
+            </Link>
           </li>
         </ul>
-      </nav>
+      </div>
 
-      <h4> Address </h4>
-      <h5>TBD</h5>
-      
-    </footer>
+      <div>
+        <p className="text-xl mb-4">Address</p>
+
+        <p className="text-base mb-1">TBD</p>
+      </div>
+    </div>
   );
-};
+}
 
 /*
 
 TODO:
 
 - Email link
-- Insta & FB links to new window
 
 */
 
