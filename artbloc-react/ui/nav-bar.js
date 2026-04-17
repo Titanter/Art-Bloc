@@ -1,10 +1,17 @@
+import Image from "next/image";
+
 import NavButton from "./nav-button";
 
 function Header() {
   return (
-    <div className="absolute flex bg-gray-700 w-2/5 h-2/3 right-0 m-4">
-      <div className="relative flex bg-white w-1/17 h-2/3 m-2 justify-center">
-        <div className="mt-2">AB</div>
+    <div className="absolute flex bg-white w-2/5 h-2/3 right-0 m-4">
+      <div className="relative flex-none size-13 mt-1 ml-1.5">
+        <Image
+          src="/ABNavLogo.png"
+          width={100}
+          height={100}
+          alt="Nav bar logo"
+        />
       </div>
 
       <NavButton text="HOME" address="/" colorProperty="bg-[#e78680]" />
