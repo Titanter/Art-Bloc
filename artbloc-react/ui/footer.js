@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="grid grid-cols-4 pt-7 pl-10 bg-[#2c2421] w-full h-full">
+    <div className="grid grid-cols-4 pt-7 pl-10 bg-[#2c2421] w-full h-full text-[#f5ebd9]">
       <div>
         <p className="text-xl mb-4">Navigation</p>
         <ul className="text-base mb-1">

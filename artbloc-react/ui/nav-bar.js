@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import NavButton from "./nav-button";
+import LinkButton from "./link-button";
 
 function Header() {
   return (
@@ -14,18 +14,35 @@ function Header() {
         />
       </div>
 
-      <NavButton text="HOME" address="/" colorProperty="bg-[#e78680]" />
-      <NavButton
-        text="ARTISTS"
-        address="/artists"
-        colorProperty="bg-[#ea8364]"
+      <LinkButton
+        text="HOME"
+        textAddOn="m-2"
+        buttonAddOn="relative flex bg-[#e78680] w-1/5 h-2/3 m-2 z-2 justify-center"
+        address="/"
       />
-      <NavButton text="EVENTS" address="/events" colorProperty="bg-[#799d75]" />
-      <NavButton text="ABOUT" address="/about" colorProperty="bg-[#4e827d]" />
-      <NavButton
+      <LinkButton
+        text="ARTISTS"
+        textAddOn="m-2"
+        buttonAddOn="relative flex bg-[#ea8364] w-1/5 h-2/3 m-2 z-2 justify-center"
+        address="/artists"
+      />
+      <LinkButton
+        text="EVENTS"
+        textAddOn="m-2"
+        buttonAddOn="relative flex bg-[#799d75] w-1/5 h-2/3 m-2 z-2 justify-center"
+        address="/events"
+      />
+      <LinkButton
+        text="ABOUT"
+        textAddOn="m-2"
+        buttonAddOn="relative flex bg-[#4e827d] w-1/5 h-2/3 m-2 z-2 justify-center"
+        address="/about"
+      />
+      <LinkButton
         text="CONTACT"
+        textAddOn="m-2"
+        buttonAddOn="relative flex bg-[#ba6d91] w-1/5 h-2/3 m-2 z-2 justify-center"
         address="/contact"
-        colorProperty="bg-[#ba6d91]"
       />
     </div>
   );

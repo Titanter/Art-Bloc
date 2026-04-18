@@ -1,5 +1,5 @@
-function UpcomingEventBubbles(){
-  return <h3>UpcomingEventBubbles</h3>;
-};
+function UpcomingEventBubbles() {
+  return <div className="absolute flex right-0">UpcomingEventBubbles</div>;
+}
 
 export default UpcomingEventBubbles;
