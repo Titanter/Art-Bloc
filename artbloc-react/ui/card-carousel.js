@@ -1,5 +1,5 @@
 function CardCarousel(){
-  return <h3>CardCarousel</h3>;
+  return <div className="absolute flex right-0">CardCarousel</div>;
 };
 
 export default CardCarousel;

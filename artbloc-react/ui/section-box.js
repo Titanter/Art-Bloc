@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import UpcomingEventBubbles from "./upcoming-event-bubbles";
+import CardCarousel from "../ui/card-carousel";
 import LinkButton from "./link-button";
 
 function SectionBox({
@@ -60,9 +61,9 @@ function SectionBox({
   } else if (role === "homeEventBubbles") {
     let UEBText;
 
-    textProp = text.split(",");
-    textAddOnProp = textAddOn.split(",");
-    linkProp = link.split(",");
+    textProp = text;
+    textAddOnProp = textAddOn;
+    linkProp = link;
     bgImgProp = bgImg;
 
     bgImgDiv = `relative flex w-screen h-screen ${bgImgProp}`;
@@ -72,10 +73,16 @@ function SectionBox({
       `relative flex ${textAddOnProp[1]}`,
       `relative flex ${textAddOnProp[2]}`,
       `${textAddOnProp[3]}`,
-      `relative ${textAddOnProp[4]}`,
+      `absolute ${textAddOnProp[4]}`,
     ];
 
     UEBText = textProp.slice(5, 12);
+
+    /*
+
+      finish implementing UpcomingEventBubbles component
+
+    */
 
     component = (
       <div className={bgImgDiv}>
@@ -90,6 +97,7 @@ function SectionBox({
             textAddOn={textDiv[3]}
             buttonAddOn={textDiv[2]}
             address={linkProp[0]}
+            newTab={true}
           />
         </div>
 
@@ -97,6 +105,36 @@ function SectionBox({
 
         <Link href={linkProp[1]} className={textDiv[4]}>
           {textProp[12]}
+        </Link>
+      </div>
+    );
+  } else if (role === "homeArtistCarousel") {
+    textProp = text;
+    textAddOnProp = textAddOn;
+    linkProp = link;
+    bgImgProp = bgImg;
+
+    bgImgDiv = `relative flex w-screen h-screen pl-12 pt-8 ${bgImgProp}`;
+
+    textDiv = [
+      `relative flex ${textAddOnProp[0]}`,
+      `absolute ${textAddOnProp[1]}`,
+    ];
+
+    /*
+
+      finish implementing CardCarousel component
+
+    */
+
+    component = (
+      <div className={bgImgDiv}>
+        <div className={textDiv[0]}>{textProp[0]}</div>
+
+        <CardCarousel />
+
+        <Link href={linkProp} className={textDiv[1]}>
+          {textProp[1]}
         </Link>
       </div>
     );
