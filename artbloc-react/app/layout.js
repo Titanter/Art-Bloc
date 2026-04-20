@@ -5,7 +5,7 @@ import Footer from "../ui/footer";
 
 function Layout({ children }) {
   return (
-    <html className="absolute bg-[#f5ebd9]">
+    <html className="absolte bg-[#f5ebd9]">
       <body>
         <div className="absolute top-0 z-1 flex w-screen h-24">
           <Header />

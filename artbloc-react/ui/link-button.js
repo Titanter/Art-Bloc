@@ -7,15 +7,17 @@ function LinkButton({
   address = "/",
   newTab = false,
 }) {
-  let component = (
-    <Link href={address} className={buttonAddOn}>
-      <div className={textAddOn}>{text}</div>
-    </Link>
-  );
+  let component;
 
   if (newTab == true) {
     component = (
       <Link href={address} target="_blank" className={buttonAddOn}>
+        <div className={textAddOn}>{text}</div>
+      </Link>
+    );
+  } else {
+    component = (
+      <Link href={address} className={buttonAddOn}>
         <div className={textAddOn}>{text}</div>
       </Link>
     );

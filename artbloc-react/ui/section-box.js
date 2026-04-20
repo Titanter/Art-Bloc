@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import UpcomingEventBubbles from "./upcoming-event-bubbles";
-import CardCarousel from "../ui/card-carousel";
+import CardCarousel from "./card-carousel";
 import LinkButton from "./link-button";
+import InvolvementCard from "./involvement-card";
 
 function SectionBox({
   role = "",
@@ -55,7 +56,7 @@ function SectionBox({
     textProp = text;
     textAddOnProp = textAddOn;
 
-    textDiv = `relative flex flex-col items-center justify-center w-screen h-screen ${textAddOnProp}`;
+    textDiv = `relative flex flex-col items-center justify-center ${textAddOnProp}`;
 
     component = <div className={textDiv}>{textProp}</div>;
   } else if (role === "homeEventBubbles") {
@@ -70,19 +71,15 @@ function SectionBox({
 
     textDiv = [
       `relative flex ${textAddOnProp[0]}`,
-      `relative flex ${textAddOnProp[1]}`,
-      `relative flex ${textAddOnProp[2]}`,
+      `relative flex items-end justify-start ${textAddOnProp[1]}`,
+      `relative flex left-1/4 top-1/5 justify-center items-center ${textAddOnProp[2]}`,
       `${textAddOnProp[3]}`,
-      `absolute ${textAddOnProp[4]}`,
+      `absolute bottom-4 right-0 ${textAddOnProp[4]}`,
     ];
 
     UEBText = textProp.slice(5, 12);
 
-    /*
-
-      finish implementing UpcomingEventBubbles component
-
-    */
+    //finish implementing UpcomingEventBubbles component
 
     component = (
       <div className={bgImgDiv}>
@@ -118,14 +115,10 @@ function SectionBox({
 
     textDiv = [
       `relative flex ${textAddOnProp[0]}`,
-      `absolute ${textAddOnProp[1]}`,
+      `absolute bottom-4 right-0 ${textAddOnProp[1]}`,
     ];
 
-    /*
-
-      finish implementing CardCarousel component
-
-    */
+    //finish implementing CardCarousel component
 
     component = (
       <div className={bgImgDiv}>
@@ -138,7 +131,53 @@ function SectionBox({
         </Link>
       </div>
     );
+  } else if (role === "homeInvolvement") {
+    let ICText;
+
+    textProp = text;
+    textAddOnProp = textAddOn;
+    linkProp = link;
+    bgImgProp = bgImg;
+
+    bgImgDiv = `relative flex flex-col w-screen h-screen `;
+
+    textDiv = [
+      `relative flex items-center justify-center pt-8 ${textAddOnProp[0]}`,
+      `relative flex ${textAddOnProp[1]}`,
+      `relative flex ${textAddOnProp[2]}`,
+    ];
+
+    ICText = textDiv.slice(1);
+
+    component = (
+      <div className={bgImgDiv}>
+        <div className={textDiv[0]}>{textProp[0]}</div>
+
+        <div className="relative flex flex-row w-full h-3/4 pt-20 justify-center">
+          <InvolvementCard
+            text={textProp[1]}
+            textAddOn={ICText}
+            address={linkProp[0]}
+            bg={bgImgProp[0]}
+          />
+          <InvolvementCard
+            text={textProp[2]}
+            textAddOn={ICText}
+            address={linkProp[1]}
+            bg={bgImgProp[1]}
+          />
+          <InvolvementCard
+            text={textProp[3]}
+            textAddOn={ICText}
+            address={linkProp[2]}
+            bg={bgImgProp[0]}
+          />
+        </div>
+      </div>
+    );
   }
+
+  //next step: lay groundwork for homeInvolvement sectionBox, and ALSO potentially make it
 
   return component;
 }
