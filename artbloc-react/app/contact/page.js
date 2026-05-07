@@ -1,5 +1,7 @@
 import SectionBox from "../../ui/section-box";
 
+//auatomated email send using a bot email? look into it
+
 function Contact(){
   return (
       <div>
@@ -9,6 +11,7 @@ function Contact(){
         <SectionBox />
       </div>
     );
+    //NEXT: implement contactInvolvement SectionBox
 };
 
 export default Contact;

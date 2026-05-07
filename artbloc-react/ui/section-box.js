@@ -118,7 +118,7 @@ function SectionBox({
       `absolute bottom-4 right-0 ${textAddOnProp[1]}`,
     ];
 
-    //finish implementing CardCarousel component
+    //finish implementing CardCarousel component, include only current event artists
 
     component = (
       <div className={bgImgDiv}>
@@ -175,9 +175,65 @@ function SectionBox({
         </div>
       </div>
     );
-  }
+  } else if (role === "aboutMission") {
+    textProp = text;
+    textAddOnProp = textAddOn;
 
-  //next step: lay groundwork for homeInvolvement sectionBox, and ALSO potentially make it
+    bgImgDiv = `relative flex w-screen h-screen `;
+
+    textDiv = [
+      `relative flex ${textAddOnProp[0]}`,
+      `relative flex mt-20 ${textAddOnProp[1]}`,
+      `relative flex mt-8 whitespace-pre-line ${textAddOnProp[2]}`,
+    ];
+
+    component = (
+      <div className={bgImgDiv}>
+        <div className="relative flex flex-col justify-center w-1/3 h-full pl-12">
+          <div className={textDiv[0]}>{textProp[0]}</div>
+        </div>
+        <div className="relative flex flex-col justify-center w-2/3 h-full pl-30 ">
+          <div className={textDiv[1]}>{textProp[1]}</div>
+          <div className={textDiv[2]}>{textProp[2]}</div>
+        </div>
+      </div>
+    );
+  } else if (role === "aboutStaticPic") {
+    bgImgProp = bgImg;
+
+    bgImgDiv = `relative flex w-screen h-screen ${bgImgProp} bg-cover`;
+
+    component = <div className={bgImgDiv}></div>;
+  } else if (role === "aboutHistory") {
+    textProp = text;
+    textAddOnProp = textAddOn;
+    imgProp = img;
+    imgAddOnProp = imgAddOn;
+    bgImgProp = bgImg;
+
+    bgImgDiv = `relative flex w-screen h-screen ${bgImgProp}`;
+
+    imgDiv = `relative flex w-4/9 h-full justify-center items-center`;
+
+    textDiv = [
+      `relative flex mt-20 ${textAddOnProp[0]}`,
+      `relative flex mt-8 ${textAddOnProp[1]}`,
+      `relative flex mt-2 whitespace-pre-line ${textAddOnProp[2]}`,
+    ];
+
+    component = (
+      <div className={bgImgDiv}>
+        <div className={imgDiv}>
+          <Image src={imgProp} width={850} height={850} alt={imgAddOnProp} />
+        </div>
+        <div className="relative flex flex-col w-5/9 h-full pr-20 ">
+          <div className={textDiv[0]}>{textProp[0]}</div>
+          <div className={textDiv[1]}>{textProp[1]}</div>
+          <div className={textDiv[2]}>{textProp[2]}</div>
+        </div>
+      </div>
+    );
+  }
 
   return component;
 }

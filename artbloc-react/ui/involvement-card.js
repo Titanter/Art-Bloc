@@ -9,8 +9,8 @@ function InvolvementCard({
   let bgDiv = `relative flex flex-col items-center w-100 h-full ${bg}`;
 
   let textDiv = [
-    `relative flex pt-8 ${textAddOn[0]}`,
-    `relative flex items-center ${textAddOn[1]}`,
+    `relative flex text-center justify-center mt-8 ${textAddOn[0]}`,
+    `relative flex text-center mt-20 mb-15 ${textAddOn[1]}`,
   ];
 
   let component = (
@@ -18,7 +18,7 @@ function InvolvementCard({
       <div className={textDiv[0]}>{text[0]}</div>
       <div className={textDiv[1]}>{text[1]}</div>
 
-      <Link href={address} className="">
+      <Link href={address} className="relative flex bg-white w-1/2 h-20 z-2 justify-center">
         <div>Arrow</div>
       </Link>
     </div>

@@ -48,7 +48,11 @@ function Home() {
       "Vos contributions nous aident à pérenniser notre organisme et à toucher un public plus large grâce à l'art. Chaque don compte pour bâtir une communauté artistique inclusive.",
     ],
   ];
-  const homeInvolvementTextAddOn = [" w-full h-30 text-8xl ", "  ", "  "];
+  const homeInvolvementTextAddOn = [
+    " w-full h-30 text-8xl ",
+    " w-full h-28 text-3xl ",
+    " w-7/8 h-40 text-lg",
+  ];
   //need actual links
   const homeInvolvementLink = [
     "/contact",
