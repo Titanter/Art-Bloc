@@ -6,7 +6,7 @@ function InvolvementCard({
   address = "/",
   bg = "",
 }) {
-  let bgDiv = `relative flex flex-col items-center w-100 h-full ${bg}`;
+  let bgDiv = `relative flex flex-col items-center w-100 h-full border-2 border-[#f5ebd9] ${bg}`;
 
   let textDiv = [
     `relative flex text-center justify-center mt-8 ${textAddOn[0]}`,

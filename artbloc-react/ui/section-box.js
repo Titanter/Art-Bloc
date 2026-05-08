@@ -233,6 +233,43 @@ function SectionBox({
         </div>
       </div>
     );
+  } else if (role === "contactInvolvement") {
+    textProp = text;
+    textAddOnProp = textAddOn;
+    linkProp = link;
+    bgImgProp = bgImg;
+
+    bgImgDiv = `relative flex flex-col w-screen h-screen ${bgImgProp[0]}`;
+
+    textDiv = [
+      `relative flex ${textAddOnProp[0]}`,
+      `relative flex ${textAddOnProp[1]}`,
+    ];
+
+    component = (
+      <div className={bgImgDiv}>
+        <div className="relative flex flex-row w-full h-4/5 pt-40 justify-center">
+          <InvolvementCard
+            text={textProp[0]}
+            textAddOn={textDiv}
+            address={linkProp[0]}
+            bg={bgImgProp[1]}
+          />
+          <InvolvementCard
+            text={textProp[1]}
+            textAddOn={textDiv}
+            address={linkProp[1]}
+            bg={bgImgProp[2]}
+          />
+          <InvolvementCard
+            text={textProp[2]}
+            textAddOn={textDiv}
+            address={linkProp[2]}
+            bg={bgImgProp[1]}
+          />
+        </div>
+      </div>
+    );
   }
 
   return component;
