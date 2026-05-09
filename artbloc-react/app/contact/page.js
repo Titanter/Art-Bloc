@@ -1,3 +1,5 @@
+import Form from "next/form";
+
 import SectionBox from "../../ui/section-box";
 
 //auatomated email send using a bot email? look into it
@@ -29,10 +31,26 @@ function Contact() {
   ];
 
   const contactInvolvementBg = ["bg-[#cb7484]", "bg-[#d57278]", "bg-[#e8998d]"];
-
+//continue working on form
   return (
     <div>
-      <SectionBox />
+      <div className="relative flex flex-col w-screen ml-15">
+        <div className="relative flex w-full h-26 text-8xl mt-40 ">
+          Contactez-nous ▪
+        </div>
+        <div className="relative flex w-175 h-18 text-3xl mt-7 ">
+          Une question? Écrivez-nous! Il nous fera un plaisir de vous répondre.
+        </div>
+        <div className="relative flex flex-row w-screen mt-5 min-h-screen">
+          <div className="relative flex flex-col w-full ml-2">meme1</div>
+
+          <Form action="" className="relative grid grid-cols-2 w-full ml-2">
+            <input name="test" className="relative flex w-20 "/>
+
+            <button type="submit">Submit</button>
+          </Form>
+        </div>
+      </div>
 
       <SectionBox
         role="contactInvolvement"
@@ -43,7 +61,6 @@ function Contact() {
       />
     </div>
   );
-  //NEXT: implement contactInvolvement SectionBox
 }
 
 export default Contact;

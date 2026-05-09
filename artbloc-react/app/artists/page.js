@@ -15,13 +15,12 @@ function Artists() {
     ["bg-[#548b8c]", "bg-[#5c9899]"],
   ];
 
-  //tune grid and card css
   return (
     <div className="relative flex flex-col w-screen ">
-      <div className="relative flex w-full h-26 text-8xl mt-30 ml-10">
+      <div className="relative flex w-full h-26 text-8xl mt-40 ml-15">
         Nos artistes ▪
       </div>
-      <div className="relative grid grid-cols-4 justify-center gap-4 w-full min-h-screen mt-15">
+      <div className="relative grid grid-cols-4 gap-y-15 justify-items-center w-full min-h-screen mt-15 mb-15">
         <ArtistCard
           text={textNameTests[0]}
           textAddOn={textAddOnTests[0]}

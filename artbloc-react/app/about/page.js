@@ -1,4 +1,5 @@
 import SectionBox from "../../ui/section-box";
+import ArtistCard from "../../ui/artist-card";
 
 function About() {
   const aboutMissionText = [
@@ -28,6 +29,21 @@ Là où les musiciens on les open mics, les artistes auront Art Bloc. Nous cherc
     " w-full h-20 text-4xl text-[#f5ebd9] font-bold ",
     " w-full h-120 text-4xl text-[#f5ebd9] ",
   ];
+
+  const textNameTests = [
+    ["Louis-Vincent Poellhuber", "Communications"],
+    ["Jennie Ming", "Art Coordinator"],
+    ["Nancy Zhu", "Art Coordinator"],
+    ["Helen Vuong", "Event Coordinator"],
+    ["Yu Xuan Zhao", "Curation/Design"],
+    ["Tian-Su Zhong", "Event Management"],
+  ];
+
+  const textAddOnTests = [
+    ["bg-[#d57278]", "bg-[#d98187]"],
+    ["bg-[#548b8c]", "bg-[#5c9899]"],
+  ];
+
   return (
     <div>
       <SectionBox
@@ -36,7 +52,7 @@ Là où les musiciens on les open mics, les artistes auront Art Bloc. Nous cherc
         textAddOn={aboutMissionTextAddOn}
       />
 
-      <SectionBox role="aboutStaticPic" bgImg="bg-[url(/ABBannerTemp.jpg)]" />
+      <SectionBox role="aboutStaticPic" bgImg="bg-[url(/chungus.png)]" />
 
       <SectionBox
         role="aboutHistory"
@@ -47,10 +63,67 @@ Là où les musiciens on les open mics, les artistes auront Art Bloc. Nous cherc
         bgImg="bg-[#4d7b7f]"
       />
 
-      <SectionBox />
+      <div className="relative flex flex-col w-screen ">
+        <div className="relative flex w-full h-26 text-8xl mt-20 ml-15">
+          Rencontrez-nous ▪
+        </div>
+        <div className="relative flex w-full h-12 justify-center items-center text-4xl mt-10 ">
+          Conseil exécutif
+        </div>
+        <div className="relative grid grid-cols-4 gap-y-15 justify-items-center w-full min-h-screen mt-7 mb-15">
+          <ArtistCard
+            text={textNameTests[0]}
+            textAddOn={textAddOnTests[0]}
+            img="/ABHomeLogo.png"
+            imgAddOn={textNameTests[0][0]}
+            link="/"
+          />
+          <ArtistCard
+            text={textNameTests[1]}
+            textAddOn={textAddOnTests[0]}
+            img="/ABHomeLogo.png"
+            imgAddOn={textNameTests[1][0]}
+            link="/"
+          />
+          <ArtistCard
+            text={textNameTests[2]}
+            textAddOn={textAddOnTests[0]}
+            img="/ABHomeLogo.png"
+            imgAddOn={textNameTests[2][0]}
+            link="/"
+          />
+          <ArtistCard
+            text={textNameTests[3]}
+            textAddOn={textAddOnTests[0]}
+            img="/ABHomeLogo.png"
+            imgAddOn={textNameTests[3][0]}
+            link="/"
+          />
+
+          <div className="relative flex w-full col-span-4 h-12 justify-center items-center text-4xl mt-10 ">
+            Satellites
+          </div>
+
+          <ArtistCard
+            text={textNameTests[4]}
+            textAddOn={textAddOnTests[1]}
+            img="/ABHomeLogo.png"
+            imgAddOn={textNameTests[4][0]}
+            divAddOn="col-span-2"
+            link="/"
+          />
+          <ArtistCard
+            text={textNameTests[5]}
+            textAddOn={textAddOnTests[1]}
+            img="/ABHomeLogo.png"
+            imgAddOn={textNameTests[5][0]}
+            divAddOn="col-span-2"
+            link="/"
+          />
+        </div>
+      </div>
     </div>
   );
-  //remove last SectionBox and manually add section for displaying execs
 }
 
 export default About;
