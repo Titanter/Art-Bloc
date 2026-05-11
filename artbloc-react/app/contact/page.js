@@ -1,5 +1,6 @@
 import Form from "next/form";
 import Link from "next/link";
+import Image from "next/image";
 
 import SectionBox from "../../ui/section-box";
 
@@ -32,7 +33,7 @@ function Contact() {
   ];
 
   const contactInvolvementBg = ["bg-[#cb7484]", "bg-[#d57278]", "bg-[#e8998d]"];
-  //add images to social media links, work on event page presentation
+
   return (
     <div>
       <div className="relative flex flex-col w-screen ml-15">
@@ -49,6 +50,13 @@ function Contact() {
               target="_blank"
               className="relative flex text-3xl mb-2"
             >
+              <Image
+                src="/emailIcon.png"
+                width={40}
+                height={40}
+                alt="email icon"
+                className="mr-2"
+              />
               artbloc@outlook.com
             </Link>
 
@@ -57,6 +65,13 @@ function Contact() {
               target="_blank"
               className="relative flex text-3xl mb-2"
             >
+              <Image
+                src="/instagramIcon.png"
+                width={40}
+                height={40}
+                alt="email icon"
+                className="mr-2"
+              />
               @artblocstudio
             </Link>
 
@@ -65,6 +80,13 @@ function Contact() {
               target="_blank"
               className="relative flex text-3xl mb-2"
             >
+              <Image
+                src="/facebookIcon.png"
+                width={40}
+                height={40}
+                alt="email icon"
+                className="mr-2"
+              />
               ART BLOC Studio
             </Link>
           </div>
