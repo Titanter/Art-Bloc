@@ -9,12 +9,12 @@ function Events() {
 
   const eventTextAddOn = [
     [
-      " w-full h-12 text-3xl text-[#f5ebd9] ",
-      " w-full h-10 text-xl text-[#f5ebd9] ",
+      " w-120 h-20 text-5xl text-[#f5ebd9] ",
+      " w-115 h-10 text-3xl text-[#f5ebd9] ",
     ],
     [
-      " w-full h-12 text-3xl text-[#f5ebd9] ",
-      " w-full h-10 text-xl text-[#f5ebd9] ",
+      " w-120 h-20 text-5xl text-[#f5ebd9] ",
+      " w-115 h-10 text-3xl text-[#f5ebd9] ",
     ],
   ];
 
@@ -33,11 +33,11 @@ function Events() {
   const eventBg = [" bg-[#586744] ", " bg-[#586744] "];
 
   return (
-    <div className="relative flex flex-col w-screen min-h-screen ml-15">
+    <div className="relative flex flex-col w-screen min-h-screen ml-15 mb-15">
       <div className="relative flex w-full h-26 text-8xl mt-40 ">
         Nos événements ▪
       </div>
-      <div className="relative flex w-175 h-18 text-4xl mt-10 ">À venir</div>
+      <div className="relative flex w-175 h-18 text-5xl mt-15 ">À venir</div>
 
       <EventCard
         type={eventType[0]}
@@ -49,9 +49,19 @@ function Events() {
         bgColor={eventBg[0]}
       />
 
-      <div className="relative flex w-175 h-18 text-4xl mt-7 ">
+      <div className="relative flex w-175 h-18 text-5xl mt-20 ">
         Événements passés
       </div>
+
+      <EventCard
+        type={eventType[1]}
+        text={eventText[1]}
+        textAddOn={eventTextAddOn[1]}
+        img={eventImg[1]}
+        imgAddOn={eventImgAddOn[1]}
+        link={eventLink[1]}
+        bgColor={eventBg[1]}
+      />
     </div>
   );
 }
